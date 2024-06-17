@@ -9,7 +9,7 @@ from .utils import authenticate_admin
 
 # CSV 파일을 읽어옵니다.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-csv_path = os.path.join(BASE_DIR, 'myapp/data/location_file.csv')
+csv_path = os.path.join(BASE_DIR, 'mysite/myapp/data/location_file.csv')
 xy_df = pd.read_csv(csv_path)
 # NaN 값을 0으로 대체합니다.
 a_df = xy_df.fillna(0)
@@ -42,23 +42,23 @@ def categorize_temperature(temp):
 
 def get_image_by_temperature(temperature):
     if temperature < -10:
-        return 'myapp/images/very_cold.jpeg'
+        return 'mysite/myapp/images/very_cold.jpeg'
     elif -10 <= temperature < 0:
-        return 'myapp/images/cold.jpeg'
+        return 'mysite/myapp/images/cold.jpeg'
     elif 0 <= temperature < 5:
-        return 'myapp/images/chilly.jpeg'
+        return 'mysite/myapp/images/chilly.jpeg'
     elif 5 <= temperature < 10:
-        return 'myapp/images/cool.jpeg'
+        return 'mysite/myapp/images/cool.jpeg'
     elif 10 <= temperature < 15:
-        return 'myapp/images/mild.jpeg'
+        return 'mysite/myapp/images/mild.jpeg'
     elif 15 <= temperature < 20:
-        return 'myapp/images/pleasant.jpeg'
+        return 'mysite/myapp/images/pleasant.jpeg'
     elif 20 <= temperature < 25:
-        return 'myapp/images/warm.jpeg'
+        return 'mysite/myapp/images/warm.jpeg'
     elif 25 <= temperature < 30:
-        return 'myapp/images/hot.jpeg'
+        return 'mysite/myapp/images/hot.jpeg'
     else:
-        return 'myapp/images/very_hot.jpeg'
+        return 'mysite/myapp/images/very_hot.jpeg'
 
 def get_weather_and_recommendation(nx, ny, location):
     API_Key = "I8rsN/eXyw28QEDPY4YblMW9rMSLmoQvM6vXBo9FTRfCOALb0bvQs2ggVULQHlwnesuHCzVcu16/PcmI28dIEQ=="
