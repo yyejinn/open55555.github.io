@@ -9,7 +9,7 @@ from .utils import authenticate_admin
 
 # CSV 파일을 읽어옵니다.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-csv_path = os.path.join(BASE_DIR, 'mysite/myapp/data/location_file.csv')
+csv_path = os.path.join(BASE_DIR, 'myapp/data/location_file.csv')
 xy_df = pd.read_csv(csv_path)
 # NaN 값을 0으로 대체합니다.
 a_df = xy_df.fillna(0)
@@ -42,23 +42,23 @@ def categorize_temperature(temp):
 
 def get_image_by_temperature(temperature):
     if temperature < -10:
-        return 'myapp/images/very_cold.jpeg'
+        return 'images/very_cold.jpeg'
     elif -10 <= temperature < 0:
-        return 'myapp/images/cold.jpeg'
+        return 'images/cold.jpeg'
     elif 0 <= temperature < 5:
-        return 'myapp/images/chilly.jpeg'
+        return 'images/chilly.jpeg'
     elif 5 <= temperature < 10:
-        return 'myapp/images/cool.jpeg'
+        return 'images/cool.jpeg'
     elif 10 <= temperature < 15:
-        return 'myapp/images/mild.jpeg'
+        return 'images/mild.jpeg'
     elif 15 <= temperature < 20:
-        return 'myapp/images/pleasant.jpeg'
+        return 'images/pleasant.jpeg'
     elif 20 <= temperature < 25:
-        return 'myapp/images/warm.jpeg'
+        return 'images/warm.jpeg'
     elif 25 <= temperature < 30:
-        return 'myapp/images/hot.jpeg'
+        return 'images/hot.jpeg'
     else:
-        return 'myapp/images/very_hot.jpeg'
+        return '/images/very_hot.jpeg'
 
 def get_weather_and_recommendation(nx, ny, location):
     API_Key = "I8rsN/eXyw28QEDPY4YblMW9rMSLmoQvM6vXBo9FTRfCOALb0bvQs2ggVULQHlwnesuHCzVcu16/PcmI28dIEQ=="
@@ -160,7 +160,7 @@ def weather(request):
         address_parts = address.split(' ')
         
         if len(address_parts) < 3:
-            return render(request, 'myapp/weather.html', {'error': '주소를 올바르게 입력해주세요.'})
+            return render(request, "../index.html", {'error': '주소를 올바르게 입력해주세요.'})
         
         input_1단계 = address_parts[0]
         input_2단계 = address_parts[1]
@@ -182,23 +182,23 @@ def weather(request):
             ny = filtered_df.iloc[0]['격자 Y']
             weather_data = get_weather_and_recommendation(nx, ny, address)
             if weather_data is None:
-                return render(request, 'myapp/weather.html', {'error': '날씨 데이터를 가져오지 못했습니다.'})
-            return render(request, 'myapp/output.html', {'weather_data': weather_data})
+                return render(request, "../index.html", {'error': '날씨 데이터를 가져오지 못했습니다.'})
+            return render(request, 'templates/output.html', {'weather_data': weather_data})
         else:
-            return render(request, 'myapp/weather.html', {'error': '조건에 맞춰 다시 입력해주세요.'})
-    return render(request, 'myapp/weather.html')
+            return render(request, "../index.html", {'error': '조건에 맞춰 다시 입력해주세요.'})
+    return render(request, "../index.html")
 
 def trend(request):
-    return render(request, 'myapp/trend.html')
+    return render(request, 'templates/trend.html')
 
 def method_of_use(request):
-    return render(request, 'myapp/method_of_use.html')
+    return render(request, 'templates/method_of_use.html')
 
 def situation(request):
-    return render(request, 'myapp/situation.html')
+    return render(request, 'templates/situation.html')
 
 def season(request):
-    return render(request, 'myapp/season.html')
+    return render(request, 'templates/season.html')
 
 def qna(request):
     reviews = Review.objects.all()
@@ -209,7 +209,7 @@ def qna(request):
         'review_form': review_form,
         'admin_auth_form': admin_auth_form
     }
-    return render(request, 'myapp/qna.html', context)
+    return render(request, 'templates/qna.html', context)
 
 def post_review(request):
     if request.method == 'POST':
@@ -232,3 +232,4 @@ def delete_review(request, review_id):
             else:
                 return redirect('qna')  # 인증 실패 시 처리
     return redirect('qna')
+
