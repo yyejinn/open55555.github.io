@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>후기</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/qna_style.css' %}">
+</head>
+<body>
+    <h3 class="menu-bar con-min-width">
+        <h3 class="menu-bar con-min-width">
+            <div class="con">
+                <nav class="menu-bar__menu-box-1 text-align-center">
+                    <ul class="inline-grid">
+                        <li><a href="#">Weather Home</a></li>
+                        <li><a href="#">Trend Analysis</a></li>
+                        <li><a href="#">Method of Use</a></li>
+                        <li><a href="#">Situation</a></li>
+                        <li><a href="#">Season</a></li>
+                        <li><a href="#">Review</a></li>
+                    </ul>
+                </nav>
+            </div>
+    </h3>
+    <h1>후기</h1>
+    <div class="container">
+        <!-- 후기 작성 폼 -->
+        <div class="review-form">
+            <h2>후기 작성하기</h2>
+            <form method="post" action="{% url 'post_review' %}">
+                {% csrf_token %}
+                {{ review_form.as_p }}
+                <button type="submit">게시</button>
+            </form>
+        </div>
+
+        <!-- 후기 목록 -->
+        <div class="question-list">
+            <h2>후기 목록</h2>
+            {% for review in reviews %}
+            <div class="question-item">
+                <h3>{{ review.author }}</h3>
+                <p>{{ review.content }}</p>
+
+                <!-- 후기 삭제 -->
+                <form method="post" action="{% url 'delete_review' review.id %}">
+                    {% csrf_token %}
+                    {{ admin_auth_form.as_p }}
+                    <button type="submit">삭제</button>
+                </form>
+            </div>
+            {% empty %}
+            <p>후기가 없습니다.</p>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

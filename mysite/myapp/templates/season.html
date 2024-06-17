@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>계절별</title>
+</head>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>이름</title>
+  <link rel="stylesheet" type="text/css" href="css/season.css">
+  <script src="https://kit.fontawesome.com/0bb6f287f4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h3 class="menu-bar con-min-width">
+        <div class="con">
+            <nav class="menu-bar__menu-box-1 text-align-center">
+                <ul class="inline-grid">
+                    <li><a href="#">Weather Home</a></li>
+                    <li><a href="#">Trend Analysis</a></li>
+                    <li><a href="#">Method of Use</a></li>
+                    <li><a href="#">Situation</a></li>
+                    <li><a href="#">Season</a></li>
+                    <li><a href="#">Review</a></li>
+                </ul>
+            </nav>
+        </div>
+  </h3>
+    <div class="season-container">
+            <!-- 봄 -->
+            <div class="season-item">
+                <img src="{% static 'myapp/images/spring.png' %}" alt="봄 옷차림">
+                <div class="text">
+                    <h2 class="spring">봄</h2>
+                    <p>
+                        봄은 일반적으로 3월 중순부터 5월 말까지로 기온이 따뜻해지면서 신선하고 밝은 컬러의 옷을 입기 좋은 계절입니다. 낮과 밤의 온도 차이가 크고, 갑작스러운 비가 자주 오므로 가벼운 자켓이나 가디건, 우산을 준비해두는 것이 좋습니다.
+                        <br><br>
+                        추천 옷차림<br>
+                        상의: 가벼운 니트, 맨투맨, 가디건 등<br>
+                        하의: 청바지, 슬랙스, 스키니 진 등<br>
+                        외투: 가벼운 자켓, 셔츠 재킷<br>
+                        신발: 스니커즈, 뮬, 플랫 슈즈<br>
+                        액세서리: 스카프, 가벼운 목걸이
+                    </p>
+                </div>
+            </div>
+
+            <!-- 여름 -->
+            <div class="season-item">
+                <div class="text">
+                    <h2 class="summer">여름</h2>
+                    <p>
+                        여름은 일반적으로 6월 초부터 8월 말까지로 무더운 날씨와 높은 습도로 인해 통풍이 잘 되는 옷을 선택해야 합니다. 쿨링 소재나 흡습력이 좋은 옷을 고르며, 가벼운 소재의 옷을 선호합니다. 게다가 강수량이 많고, 소나기가 자주 오므로 우비나 우산, 장화를 준비해두는 것이 좋습니다.
+                        <br><br>
+                        추천 옷차림<br>
+                        상의: 얇고 통기성 좋은 반팔, 나시티, 쿨링 소재의 셔츠<br>
+                        하의: 반바지, 린넨 바지, 쇼츠<br>
+                        외투: 비 오는 날을 대비한 우비 또는 무드 블록<br>
+                        신발: 샌들, 슬리퍼, 플립플랍<br>
+                        액세서리: 모자, 선글라스<br>
+                    </p>
+                    </p>
+                </div>
+                <img src="{% static 'myapp/images/summer.png' %}" alt="여름 옷차림">
+            </div>
+
+            <!-- 가을 -->
+            <div class="season-item">
+                <img src="{% static 'myapp/images/autumn.png' %}" alt="가을 옷차림">
+                <div class="text">
+                    <h2 class="autumn">가을</h2>
+                    <p>
+                        가을은 일반적으로 9월 초부터 11월말까지로 낮과 밤의 온도 차이가 크기 때문에 가벼운 니트나 가디건, 셔츠 재킷을 입고, 청바지나 슬랙스를 매치하는 것이 좋습니다.
+                        <br><br>
+                        추천 옷차림<br>
+                        상의: 가벼운 가디건, 니트, 후드티<br>
+                        하의: 슬랙스, 청바지, 스키니 진<br>
+                        외투: 가벼운 자켓, 셔츠 재킷<br>
+                        신발: 단화, 부츠, 뮬<br>
+                        액세서리: 스카프, 숄더백<br>
+                    </p>
+                </div>
+            </div>
+
+            <!-- 겨울 -->
+            <div class="season-item">
+                <div class="text">
+                    <h2 class="winter">겨울</h2>
+                    <p>
+                        겨울은 일반적으로 12월 초부터 2월 말까지로 추운 날씨와 건조한 날씨가 특징입니다. 매우 춥거나 눈이 올 수 있므로 따뜻한 옷차림이 필요합니다. 패딩이나 덕 다운 재킷, 기모티를 착용하고, 목도리와 장갑, 헤드밴드 등의 액세서리를 활용하세요. 눈이 오는 지역이라면 눈 부츠나 레인 부츠를 착용하는 것이 좋습니다.
+                        <br><br>
+                        추천 옷차림<br>
+                        상의: 두꺼운 니트, 털 니트, 기모티<br>
+                        하의: 기모 바지, 기모 슬랙스, 두꺼운 청바지<br>
+                        외투: 패딩, 덕 다운 재킷, 코트<br>
+                        신발: 레인 부츠, 눈 부츠, 누벅 부츠<br>
+                        액세서리: 목도리, 장갑, 헤드밴드<br>
+
+                    </p>
+                </div>
+                <img src="{% static 'myapp/images/winter.png' %}" alt="겨울 옷차림">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

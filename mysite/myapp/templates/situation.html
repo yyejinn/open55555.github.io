@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상황별 옷차림</title>
+    {% load static %}
+    <link href="{% static 'myapp/situation.css' %}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <h3 class="menu-bar con-min-width">
+        <h3 class="menu-bar con-min-width">
+            <div class="con">
+                <nav class="menu-bar__menu-box-1 text-align-center">
+                    <ul class="inline-grid">
+                        <li><a href="#">Weather Home</a></li>
+                        <li><a href="#">Trend Analysis</a></li>
+                        <li><a href="#">Method of Use</a></li>
+                        <li><a href="#">Situation</a></li>
+                        <li><a href="#">Season</a></li>
+                        <li><a href="#">Review</a></li>
+                    </ul>
+                </nav>
+            </div>
+    </h3>
+
+    <div class="container">
+        <!-- 운동 -->
+        <div class="situation-section">
+            <h2>1. 운동</h2>
+            <div class="image-container">
+                <img src="{% static 'myapp/images/exer1.png' %}" alt="운동 복장">
+                <img src="{% static 'myapp/images/exer2.png' %}"alt="운동 복장">
+            </div>
+            <div class="situation-content">
+                <div class="text">
+                    <p>운동을 하면 땀이 많이 나기 때문에 땀의 배출이 잘 되어야 하기 때문에
+                        흡습성과 통기성이 좋은 기능성 소재의 운동복을 입어야 한다.
+                        또 운동을 할 때에는 자신이 어떻게 움직이는지, 얼마나 움직이는지 등
+                        자세 확인을 하는 것이 중요하기 때문에 움직임이 잘 드러나는 운동복을 입는 것이 좋다.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 면접 -->
+        <div class="situation-section">
+            <h2>2. 면접</h2>
+            <div class="image-container">
+                <img src="{% static 'myapp/images/int1.png' %}" alt="운동 복장">
+                <img src="{% static 'myapp/images/int2.png' %}" alt="운동 복장">
+            </div>
+            <div class="situation-content">
+                <div class="text">
+                    <p>면접에는 전문적이고 신뢰감을 줄 수 있는 정장이나 비즈니스 슈트를 입는 것이 바람직합니다. <br>
+                        머리도 단정하게 세팅하고 가시는 것이 좋습니다.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 결혼식 -->
+        <div class="situation-section">
+            <h2>3. 결혼식</h2>
+           <div class="image-container">
+                <img src="{% static 'myapp/images/wed1.png' %}" alt="운동 복장">
+                <img src="{% static 'myapp/images/wed2.png' %}" alt="운동 복장">
+            </div>
+            <div class="situation-content">
+                <div class="text">
+                    <p>요즘 하객룩이 많이 캐주얼해지고 있습니다.  그러나 너무 편한 의상이나 노출이 심한 의상,
+                        올블랙이나 화이트 색상의 옷,
+                        너무 화려한 옷을 피해서 입으시면 됩니다.
+                        요즘 하객룩이 많이 캐주얼해지고 있습니다.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 장례식장 -->
+        <div class="situation-section">
+            <h2>4. 장례식장</h2>
+            <img src="{% static 'myapp/images/j.png' %}" alt="장례식장 복장" class="centered-image">
+            <div class="situation-content">
+                <div class="text">
+                    <p>장례식장에는 검정색을 포함한 무채색계통의 정장 또는 평상복을 입는 것이 무난합니다.
+                        정장을 입는 경우 셔츠는 될 수 있는 대로 화려하지 않은 단색 계통으로 하는 것이 좋습니다.
+                        맨발이 보이지 않도록 스타킹이나 양말을 착용하는 것이 좋습니다.
+                        </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

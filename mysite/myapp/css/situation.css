@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'SBAggroB';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'SBAggroB', Arial, sans-serif;
+    color: #76c7e4;
+    background-color: #fff;
+    margin: 0;
+    padding: 20px;
+}
+
+h3.menu-bar {
+    margin-bottom: 100px;
+}
+
+.menu-bar__menu-box-1 > ul {
+    text-align: center;
+}
+
+.menu-bar__menu-box-1 > ul > li {
+    display: inline-block;
+}
+
+.menu-bar__menu-box-1 > ul > li > a {
+    display: block;
+    font-size: 20px;
+    padding: 10px 30px;
+}
+
+.container {
+    max-width: 800px;
+    margin-top: 30px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+a {
+    color: inherit;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover,
+a:active {
+    color: #bdbebd;
+}
+
+/* Additional styles for situation sections */
+.situation-section {
+    margin-bottom: 150px;
+    text-align: left;
+}
+
+.situation-section h2 {
+    color: #000;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* 이미지 간 간격 조정 */
+    margin-bottom: 10px; /* 이미지와 텍스트 간 간격 조정 */
+}
+
+.image-container img {
+    max-width: 45%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.situation-content .text {
+    font-size: 1.1em;
+    color: #4e4e4e;
+}

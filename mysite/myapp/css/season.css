@@ -1,0 +1,114 @@
+@font-face {
+    font-family: 'SBAggroB';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'SBAggroB', Arial, sans-serif;
+    color: #76c7e4;
+    background-color: #fff;
+    margin: 0;
+    padding: 20px;
+}
+
+h3.menu-bar {
+            margin-bottom: 100px;
+}
+
+h2.spring {
+            color: #4CAF50; /* 봄 제목 색상 */
+            font-family: 'SBAggroB', Arial, sans-serif;
+            text-shadow: 2px 2px 5px rgba(211, 211, 211, 0.8);
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        h2.summer {
+            color: #FFC107; /* 여름 제목 색상 */
+            font-family: 'SBAggroB', Arial, sans-serif;
+            text-shadow: 2px 2px 5px rgba(211, 211, 211, 0.8);
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        h2.autumn {
+            color: #b54c1a; /* 가을 제목 색상 */
+            font-family: 'SBAggroB', Arial, sans-serif;
+            text-shadow: 2px 2px 5px rgba(211, 211, 211, 0.8);
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        h2.winter {
+            color: #2196F3; /* 겨울 제목 색상 */
+            font-family: 'SBAggroB', Arial, sans-serif;
+            text-shadow: 2px 2px 5px rgba(214, 211, 211, 0.8);
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+.menu-bar__menu-box-1 > ul {
+    text-align: center;
+}
+
+.menu-bar__menu-box-1 > ul > li {
+    display: inline-block;
+}
+
+.menu-bar__menu-box-1 > ul > li > a {
+    display: block;
+    font-size: 20px;
+    padding: 10px 30px;
+}
+
+a {
+    color: inherit;
+    font-size: 14px; /* 원래 5px에서 14px로 수정 */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover,
+a:active {
+    color: #bdbebd;
+}
+
+.season-container {
+    margin-top: 30px;
+    text-align: center; /* 가운데 정렬을 추가 */
+    max-width: 800px; /* 이미지와 텍스트의 최대 너비를 설정 */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.season-item {
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center; /* 가운데 정렬을 추가 */
+}
+
+.season-item img {
+    max-width: 35%;
+    border-radius: 8px;
+}
+
+.season-item .text {
+    width: 60%;
+    text-align: left;
+    padding: 0 20px;
+    color: #8a8a8a; /* 가을 제목 색상 */
+}
+
+.season-item h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.season-item p {
+    font-size: 18px;
+    line-height: 1.6;
+}

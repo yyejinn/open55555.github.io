@@ -1,0 +1,107 @@
+@font-face {
+    font-family: 'SBAggroB';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'SBAggroB', Arial, sans-serif;
+    color: #76c7e4;
+    background-color: #fff;
+    margin: 0;
+    padding: 20px;
+}
+
+h3.menu-bar {
+    margin-bottom: 50px;
+}
+
+.menu-bar__menu-box-1 > ul {
+    text-align: center;
+}
+
+.menu-bar__menu-box-1 > ul > li {
+    display: inline-block;
+}
+
+.menu-bar__menu-box-1 > ul > li > a {
+    display: block;
+    font-size: 20px;
+    padding: 10px 30px;
+}
+
+.container {
+    max-width: 800px;
+    margin-top: 30px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+a {
+    color: inherit;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover,
+a:active {
+    color: #bdbebd;
+}
+
+/* Additional styles for trend sections */
+.trend-section {
+    margin-bottom: 100px;
+    text-align: left; /* Align text to the left */
+}
+
+.trend-section h2 {
+    color: #ff6f61;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.trend-content {
+    display: flex;
+    align-items: center;
+}
+
+.trend-content img {
+    max-width: 40%;
+    height: auto;
+    margin-right: 20px;
+}
+
+.trend-content .text {
+    max-width: 60%;
+    font-size: 1.1em;
+    color: #4e4e4e;
+}
+
+.trend-section-pantone {
+    margin-bottom: 40px;
+    text-align: center; /* Align text to the left */
+}
+
+.trend-section-pantone h2 {
+    color: #ff6f61;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.trend-content-pantone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trend-content-pantone .text {
+    max-width: 100%;
+    font-size: 1.1em;
+    text-align: center;
+    color: #4e4e4e;
+}

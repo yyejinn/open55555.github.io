@@ -1,0 +1,31 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Setup Pages
+      uses: actions/setup-pages@v1
+
+    - name: Build and Deploy
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        echo "Skipping Jekyll build"
+        mkdir -p ./_site
+        cp -r * ./_site/
+        
+    - name: Deploy to GitHub Pages
+      uses: actions/upload-pages-artifact@v1
+      with:
+        path: ./_site
+

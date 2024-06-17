@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'SBAggroB';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'SBAggroB', Arial, sans-serif;
+    color: #76c7e4;
+    background-color: #fff;
+    margin: 0;
+    padding: 20px;
+}
+
+h3.menu-bar {
+            margin-bottom: 50px;
+}
+
+
+.menu-bar__menu-box-1 > ul {
+    text-align: center;
+}
+
+.menu-bar__menu-box-1 > ul > li {
+    display: inline-block;
+}
+
+.menu-bar__menu-box-1 > ul > li > a {
+    display: block;
+    font-size: 20px;
+    padding: 10px 30px;
+}
+
+.container {
+    max-width: 800px;
+    margin-top: 30px;
+    text-align: center; /* 가운데 정렬을 추가 */
+    max-width: 800px; /* 이미지와 텍스트의 최대 너비를 설정 */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+a {
+    color: inherit;
+    font-size: 14px; /* 원래 5px에서 14px로 수정 */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover,
+a:active {
+    color: #bdbebd;
+}
+
+.search-image {
+            max-width: 80%; /* 이미지 최대 너비 설정 */
+            height: auto; /* 높이 자동 조정 */
+            display: block;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+.recom1-image, .recom2-image{
+            max-width: 50%; /* 이미지 최대 너비 설정 */
+            height: auto; /* 높이 자동 조정 */
+            display: block;
+            margin: 20px auto;
+            border-radius: 8px;
+        }
+
+h2 {
+     margin-top: 75px;
+     color: #5478d0;
+}
+
+h1 {
+    color: #335aba;
+}
+
+.one {
+            margin-bottom: 10px;
+            padding-left: 230px;
+            text-align: left;
+            color : #a9a9a9;
+}
+
+.two {
+            margin-bottom: 10px;
+            padding-left: 255px;
+            text-align: left;
+            color : #a9a9a9;
+}
+p{
+color : #a9a9a9;}
+
+li.one, li.two {
+    list-style-type: none;
+}
