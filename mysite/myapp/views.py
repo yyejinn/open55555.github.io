@@ -42,23 +42,23 @@ def categorize_temperature(temp):
 
 def get_image_by_temperature(temperature):
     if temperature < -10:
-        return 'mysite/myapp/images/very_cold.jpeg'
+        return 'myapp/images/very_cold.jpeg'
     elif -10 <= temperature < 0:
-        return 'mysite/myapp/images/cold.jpeg'
+        return 'myapp/images/cold.jpeg'
     elif 0 <= temperature < 5:
-        return 'mysite/myapp/images/chilly.jpeg'
+        return 'myapp/images/chilly.jpeg'
     elif 5 <= temperature < 10:
-        return 'mysite/myapp/images/cool.jpeg'
+        return 'myapp/images/cool.jpeg'
     elif 10 <= temperature < 15:
-        return 'mysite/myapp/images/mild.jpeg'
+        return 'myapp/images/mild.jpeg'
     elif 15 <= temperature < 20:
-        return 'mysite/myapp/images/pleasant.jpeg'
+        return 'myapp/images/pleasant.jpeg'
     elif 20 <= temperature < 25:
-        return 'mysite/myapp/images/warm.jpeg'
+        return 'myapp/images/warm.jpeg'
     elif 25 <= temperature < 30:
-        return 'mysite/myapp/images/hot.jpeg'
+        return 'myapp/images/hot.jpeg'
     else:
-        return 'mysite/myapp/images/very_hot.jpeg'
+        return 'myapp/images/very_hot.jpeg'
 
 def get_weather_and_recommendation(nx, ny, location):
     API_Key = "I8rsN/eXyw28QEDPY4YblMW9rMSLmoQvM6vXBo9FTRfCOALb0bvQs2ggVULQHlwnesuHCzVcu16/PcmI28dIEQ=="
